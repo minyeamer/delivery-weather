@@ -12,8 +12,6 @@
 
 ## 1. 분석 주제 및 목표
 
-<br>
-
 ### 1-1. 분석 주제
 
 <br>
@@ -41,8 +39,6 @@
 
 ## 2. 데이터 탐색
 
-<br>
-
 ### 2-1. KT 통신 빅데이터 플랫폼
 - [업종 목적지별 배달 주문건수](https://bdp.kt.co.kr/invoke/SOKBP2603/?goodsCode=KGUDSTNORDER)
 
@@ -63,8 +59,6 @@
 ---
 
 ## 3. 데이터 전처리
-
-<br>
 
 ### 3-1. 기존 데이터 vs 필요한 데이터 비교
 1. 지역을 서울특별시에 한정했기 때문에 행정구역이나 도시 등의 정보가 필요없음
@@ -303,8 +297,6 @@ weather = get_weather('2019', directory='original_data/')
 
 ## 4. 데이터 시각화
 
-<br>
-
 ### 4-1. 배달 데이터 시각화
 
 <br>
@@ -514,8 +506,6 @@ for delivery_month, weather_month, year, month_range in year_zip:
 ---
 
 ## 5. 그래프 분석
-
-<br>
 
 ### 5-1. 그래프 분석 포인트
 - 평균온도와 배달 주문횟수 간에 상관관계가 있는가?   
