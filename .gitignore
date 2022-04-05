@@ -1,0 +1,13 @@
+.deepnote/
+
+.ipynb_checkpoints/
+
+__pycache__/
+
+init.ipynb
+
+.DS_Store
+
+original_data/
+
+test_data/
