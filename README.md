@@ -536,8 +536,6 @@ for delivery_month, weather_month, year, month_range in year_zip:
 
 ![202107_Fastfood.png](.images/corr-graph/202107_Fastfood.png)
 
-<br>
-
 ---
 
 ### 5-3. 상관관계가 없는 그래프
