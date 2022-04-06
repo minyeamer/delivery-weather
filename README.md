@@ -553,8 +553,128 @@ for delivery_month, weather_month, year, month_range in year_zip:
 
 ## 6. 상관관계 분석
 
+## 6-1. 분석용 데이터 전처리
+
+> **온도 구간에 따라 날씨 데이터 분리**
+
+```python
+hot_temp, cold_temp = 20.0, 5.0
+warm_days, hot_days, cold_days = [], [], []
+weather_warm_list, weather_hot_list, weather_cold_list = [], [], []
+
+for weather_df in weather_list:
+    weather = weather_df.copy()
+    
+    warm_days.append(weather[ (weather['temp'] <= hot_temp) & \
+                                 (weather['temp'] >= cold_temp) ].index.tolist())
+    hot_days.append(weather[ weather['temp'] > hot_temp ].index.tolist())
+    cold_days.append(weather[ weather['temp'] < cold_temp ].index.tolist())
+
+    weather_warm_list.append(weather[ (weather['temp'] <= hot_temp) & \
+                                         (weather_df['temp'] >= cold_temp) ].copy())
+    weather_hot_list.append(weather[ weather['temp'] > hot_temp ].copy())
+    weather_cold_list.append(weather[ weather['temp'] < cold_temp ].copy())
+```
+
+- 더운 날의 최저온도와 추운 날의 최고온도 지정
+- 해당 구간에 속하는 일자들을 추출해서 각각의 온도별 리스트로 생성
+- 해당 구간에 속하는 데이터들을 추출해서 각각의 온도별 날씨 데이터 생성
+
+<br>
+
+> **온도 구간에 따라 배달 데이터 분리**
+
+```python
+delivery_warm_list, delivery_hot_list, delivery_cold_list = [], [], []
+
+temp_zip = zip(delivery_list, warm_days, hot_days, cold_days)
+
+for delivery_df, warm_day, hot_day, cold_day in temp_zip:
+    delivery_warm_list.append(delivery_df.loc[warm_day].copy())
+    delivery_hot_list.append(delivery_df.loc[hot_day].copy())
+    delivery_cold_list.append(delivery_df.loc[cold_day].copy())
+```
+
+- 온도 구간 별 일자에 속하는 데이터들을 추출해서 각각의 온도별 배달 데이터 생성
+
+---
+
+### 6-2. 이항 검정
+- 실패한 내용...
+
+---
+
+### 6-3. 산점도 분석
+
+> **연도별 산점도 분석**
+
+```python
+total_year_list = []
+
+for delivery_df, weather_df in zip(delivery_list, weather_list):
+    total_year_list.append(delivery_df.join(weather_df))
+```
+
+```python
+color_map = ['#007aff', '#ff9500', '#ff2d55']
+total_year_zip = zip(range(3), total_year_list, year_list, color_map)
+
+total_fig, total_axes = plt.subplots(3, 1, figsize=(24,10))
+total_fig.suptitle('Sum-Temp - 3 x 1 axes')
+
+for i, total_year, year, color in total_year_zip:
+
+    sns.regplot(ax=total_axes[i], x="temp", y="sum", data=total_year, color=color)
+
+    total_axes[i].set(title=f'{year} Sum-Temp')
+
+plt.tight_layout()
+plt.show()
+
+```
+
+- 연도별 배달 데이터와 날씨 데이터를 합친 새로운 데이터프레임 생성
+- 3x1 사이즈의 `subplots`을 생성하고 각각의 구역에 `regplot` 표시
+- `regplot`을 통해 평균온도와 총주문횟수 간의 분포를 분석
+- 너무 덥거나 추운 날에 배달주문이 증가한다 가정했기 때문에 해당 그래프는 직관적이지 않음
+
+<br>
+
+![연도별-산점도]
+
+<br>
+
+> **온도별 산점도 분석**
+
+```python
+total_fig, total_axes = plt.subplots(3, 3, figsize=(24,10))
+total_fig.suptitle('Sum-Temp - 3 x 3 axes')
+
+for i, year in zip(range(3), year_list):
+
+        sns.regplot(ax=total_axes[i, 0], x="temp", y="sum", data=total_cold_list[i], color='#007aff')
+        sns.regplot(ax=total_axes[i, 1], x="temp", y="sum", data=total_warm_list[i], color='#ff9500')
+        sns.regplot(ax=total_axes[i, 2], x="temp", y="sum", data=total_hot_list[i], color='#ff2d55')
+
+        total_axes[i, 0].set(title=f'{year} Cold Days')
+        total_axes[i, 1].set(title=f'{year} Warm Days')
+        total_axes[i, 2].set(title=f'{year} Hot Days')
+
+plt.tight_layout()
+plt.show()
+```
+
+- 연도별 배달 데이터와 날씨 데이터를 온도 구간 별로 나눈 데이터프레임 활용
+- 3x3 사이즈의 `subplots`을 생성하고 각각의 구역에 `regplot` 표시
+- 온도 구간에 따른 주문량 변화를 직관적으로 확인할 수 있었음
+
+<br>
+
+![온도별-산점도]
+
 ---
 ---
 
 ## 7. 분석 결과
+
 
