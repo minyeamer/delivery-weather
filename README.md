@@ -98,7 +98,7 @@
 
 <br>
 
-![배달-데이터-원본.csv](.images/01-original-delivery.png)
+![배달-데이터-원본.csv](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcQaw9D%2Fbtry5CzlECG%2F0xl5PQk5Y3sae8m6jrwis1%2Fimg.png)
 
 ---
 
@@ -107,7 +107,7 @@
 
 <br>
 
-![날씨-데이터-원본.csv](.images/02-original-weather.png)
+![날씨-데이터-원본.csv](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fco8e2s%2Fbtry68Lc2YQ%2FCS5VTYkWzNgdL9o4PDd690%2Fimg.png)
 
 ---
 ---
@@ -152,7 +152,7 @@ def make_seoul_delivery(origin_df, start_date, end_date) -> pd.DataFrame:
     <li>불필요한 '행정구역' 및 '시간' 행을 제거</li>
     <li>시작 일자부터 종료 일자 사이 기간에 해당하는 데이터를 추출해서 반환</li>
     <br>
-    <img src=".images/03-seoul-delivery.png"  width="50%"/>
+    <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbtU5Hx%2FbtrzacZGJPB%2F6Uj7qXsCIhd9dnklkoYQZK%2Fimg.png"  width="50%"/>
 </ul>
 <br>
 
@@ -181,7 +181,7 @@ def count_by_category(origin_df, sum_df, categories) -> pd.DataFrame:
     <li>추출한 데이터프레임의 '분류' 열 이름을 변경하고 템플릿과 병합하는 과정을 반복</li>
     <li>각각의 열로 분리된 데이터프레임에서 결측치를 0으로 설정하고 반환</li>
     <br>
-    <img src=".images/04-counted-delivery.png"  width="100%"/>
+    <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmWVNZ%2Fbtry8QJzb1d%2F3uXhxCEks64aJupfbF3kuK%2Fimg.png"  width="100%"/>
 </ul>
 <br>
 
@@ -209,7 +209,7 @@ def rename_kor_to_eng(origin_df) -> pd.DataFrame:
     <li>한글 데이터프레임 사본의 목차를 미리 지정한 한영 사전과 매칭시켜 변환</li>
     <li>한글 순으로 정렬된 목차를 영어 순서대로 정렬하고 반환</li>
     <br>
-    <img src=".images/05-counted-delivery-en.png"  width="100%"/>
+    <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FvR3mz%2Fbtry9prsA5B%2FVryGZvBoqw6N4KnqtnRmJ1%2Fimg.png"  width="100%"/>
 </ul>
 
 ---
@@ -242,7 +242,7 @@ def clean_up_data(origin_df, start_date, end_date) -> pd.DataFrame:
     <li>결측치를 0.0으로 맞추고 '일자' 행에서 연도 부분의 문자열을 제거</li>
     <li>시작 일자부터 종료 일자 사이 기간에 해당하는 데이터를 추출해서 반환</li>
     <br>
-    <img src=".images/06-weather.png"  width="100%"/>
+    <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FSzHlt%2Fbtry8h1KyIB%2FYBHPaZJKok5yYB0yO4BRI0%2Fimg.png"  width="100%"/>
 </ul>
 <br>
 
@@ -270,7 +270,7 @@ def rename_kor_to_eng(origin_df) -> pd.DataFrame:
     <li>한글 데이터프레임 사본의 목차를 미리 지정한 한영 사전과 매칭시켜 변환</li>
     <li>한글 순으로 정렬된 목차를 영어 순서대로 정렬하고 반환</li>
     <br>
-    <img src=".images/07-weather-en.png"  width="100%"/>
+    <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmabgQ%2Fbtry9o68nyw%2FSv4uxXcMQ5FVGpr8aciDVk%2Fimg.png"  width="100%"/>
 </ul>
 
 ---
@@ -372,7 +372,7 @@ plt.show()
 
 <br>
 
-![초록색-막대-그래프](.images/08-sum_ax.png)
+![초록색-막대-그래프](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FriWla%2Fbtry4TgX3Ag%2F8KrlolVMkrfgLLmmdo8keK%2Fimg.png)
 
 <br>
 
@@ -407,7 +407,7 @@ plt.show()
 
 <br>
 
-![4x4-파란색-막대-그래프](.images/09-4x4-grid.png)
+![4x4-파란색-막대-그래프](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FUrfVQ%2Fbtry8yovvBa%2FBpTC0F0g6EFe4BXxekG9h1%2Fimg.png)
 
 ---
 
@@ -429,7 +429,7 @@ plt.show()
     <li>평균온도 그래프는 주황색, 평균온도 변화량 그래프는 파란색</li>
     <li>온도는 변화량보다 측정치가 더 직관적이라 판단하여 평균온도 그래프 선택</li>
     <br>
-    <img src=".images/10-temp-graph.png"  width="60%"/>
+    <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdXNTOJ%2Fbtry9oF3VG1%2FZWYKShnUfvSDrMnvaXDm7k%2Fimg.png"  width="60%"/>
 </ul>
 <br>
 
@@ -453,7 +453,7 @@ plt.show()
     <li>일강수량 그래프는 주황색, 일강수량 변화량 그래프는 파란색</li>
     <li>강수량은 변화량이 더 직관적이라는 의견이 많았지만,<br>이미 일강수량 그래프로 진행하던 상태여서 기존 선택 유지</li>
     <br>
-    <img src=".images/11-rain-graph.png"  width="60%"/>
+    <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FceTluQ%2Fbtry68qVVEg%2FTKyhDpz08VFklkviQLuSb0%2Fimg.png"  width="60%"/>
 </ul>
 <br>
 
@@ -472,7 +472,7 @@ plt.show()
     <li><code>matplotlib</code>의 기본 <code>plot()</code> 함수 사용</li>
     <li>평균온도 그래프는 주황색, 일강수량 변화량 그래프는 파란색</li>
     <br>
-    <img src=".images/12-temp-rain-graph.png"  width="60%"/>
+    <img src="[.images/12-temp-rain-graph.png](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcXnJlw%2Fbtry7L23N7A%2F7hysuJWskNAEbuphptUV0K%2Fimg.png)"  width="60%"/>
 </ul>
 
 ---
@@ -525,7 +525,7 @@ plt.show()
 
 <br>
 
-![201908-디저트-배달-날씨-그래프](.images/13-delivery-weather.png)
+![201908-디저트-배달-날씨-그래프](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Frse81%2Fbtry685y2tT%2FPHGKPtNgMafIK5nmiPKR31%2Fimg.png)
 
 <br>
 
@@ -574,11 +574,11 @@ for delivery_month, weather_month, year, month_range in year_zip:
 
 <br>
 
-![201912_Chicken.png](.images/corr-graph/201912_Chicken.png)
+![201912_Chicken.png](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FG6K85%2Fbtry7taaBAr%2Fpq73ETezVndnxJkrkIIDnk%2Fimg.png)
 
 <br>
 
-![202107_Fastfood.png](.images/corr-graph/202107_Fastfood.png)
+![202107_Fastfood.png](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FciWZOv%2Fbtry2k6oSLt%2Ffz3OsZVKaqcCeUb2jKHkfk%2Fimg.png)
 
 ---
 
@@ -587,11 +587,11 @@ for delivery_month, weather_month, year, month_range in year_zip:
 
 <br>
 
-![202001_Cnfood.png](.images/corr-not-graph/202001_Cnfood.png)
+![202001_Cnfood.png](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fc1Cf7o%2Fbtry8i7qdhq%2FlpKEs2E3ZvS2ZXveph4kA0%2Fimg.png)
 
 <br>
 
-![202101_Chicken.png](.images/corr-not-graph/202101_Chicken.png)
+![202101_Chicken.png](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FKOdZV%2Fbtry66fgev8%2F6B7sSxTrIFLAbCOHxKCam1%2Fimg.png)
 
 ---
 
@@ -600,7 +600,7 @@ for delivery_month, weather_month, year, month_range in year_zip:
 
 <br>
 
-![202103_Bossam.png](.images/na-graph/202103_Bossam.png)
+![202103_Bossam.png](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F2jqOU%2Fbtry8PYfg3T%2FwKMRKncZym8RijEFMCHBkk%2Fimg.png)
 
 ---
 ---
@@ -695,7 +695,7 @@ plt.show()
 
 <br>
 
-![연도별-산점도](.images/14-scatter-year.png)
+![연도별-산점도](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcjeVhW%2FbtryZITZQpK%2FWUgekTuWKXOGipps5QUEEK%2Fimg.png)
 
 <br>
 
@@ -725,7 +725,7 @@ plt.show()
 
 <br>
 
-![온도별-산점도](.images/15-scatter-temp.png)
+![온도별-산점도](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FlQAFL%2Fbtry5DEZ3h5%2FdCCJxkEdVNUAZszX9wnMJ1%2Fimg.png)
 
 ---
 ---
